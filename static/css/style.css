@@ -9,6 +9,10 @@
 
 /* BASE STYLES */
 
+html {
+    background-color: var(--color-style);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +28,6 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background-color: var(--color-style);
     color: var(--color-light);
 }
 
@@ -36,6 +39,7 @@ div.main {
     flex-direction: column;
     align-items: center;
     font-size: 36px;
+    z-index: 10;
 }
 
 hr {
@@ -51,14 +55,15 @@ footer {
     top: auto;
     bottom: 14vh;
     width: 100%;
+    z-index: 10;
 }
 
 section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: var(--color-style);
     overflow: hidden;
+    z-index: 5;
   }
 
 section .air{
@@ -120,4 +125,70 @@ section .air.air4{
     }
 }
 
-/* MEDIA */  
+@media (max-width: 768px) {                                                                                                               
+    div.main {                                                                                                                            
+        font-size: 24px;                                                                                                                  
+    }                                                                                                                                     
+}                                                                                                                                         
+                                                                                                                                          
+.moon {                                                                                                                                   
+  width: 100px;                                                                                                                          
+  height: 100px;                                                                                                                         
+  border-radius: 50%;                                                                                                                   
+  background-color: var(--color-light);                                                                                                 
+  box-shadow: 0 0 20px 10px rgba(238, 238, 238, 0.5);                                                                                    
+  margin-bottom: 20px;                                                                                                                  
+}                                                                                                                                         
+                                                                                                                                          
+@keyframes twinkle {                                                                                                                      
+  0% {                                                                                                                                  
+      opacity: 0;                                                                                                                       
+  }                                                                                                                                     
+  50% {                                                                                                                                 
+      opacity: 1;                                                                                                                       
+  }                                                                                                                                     
+  100% {                                                                                                                                
+      opacity: 0;                                                                                                                       
+  }                                                                                                                                     
+}                                                                                                                                         
+                                                                                                                                          
+#stars, #stars2, #stars3 {                                                                                                                
+  position: absolute;                                                                                                                   
+  top: 0;                                                                                                                               
+  left: 0;                                                                                                                              
+  width: 100%;                                                                                                                          
+  height: 100%;                                                                                                                         
+  z-index: 0;                                                                                                                           
+}                                                                                                                                         
+                                                                                                                                          
+#stars::after, #stars2::after, #stars3::after {                                                                                           
+  content: "";                                                                                                                          
+  position: absolute;                                                                                                                   
+  width: 1px;                                                                                                                           
+  height: 1px;                                                                                                                          
+  background: white;                                                                                                                    
+  box-shadow:
+      5vw 95vh #fff, 92vw 15vh #fff, 10vw 20vh #fff, 80vw 5vh #fff, 50vw 50vh #fff,
+      30vw 80vh #fff, 75vw 70vh #fff, 15vw 45vh #fff, 60vw 30vh #fff, 40vw 65vh #fff,
+      88vw 85vh #fff, 22vw 55vh #fff, 58vw 25vh #fff, 73vw 40vh #fff, 95vw 60vh #fff;                                                        
+  animation: twinkle 2s infinite;                                                                                                       
+}                                                                                                                                         
+                                                                                                                                          
+#stars2::after {                                                                                                                          
+  width: 2px;                                                                                                                           
+  height: 2px;                                                                                                                          
+  box-shadow:
+      18vw 88vh #fff, 95vw 23vh #fff, 8vw 12vh #fff, 33vw 44vh #fff, 67vw 78vh #fff,
+      49vw 62vh #fff, 82vw 53vh #fff, 25vw 31vh #fff, 55vw 5vh #fff, 70vw 92vh #fff;                                                   
+  animation-delay: 0.5s;                                                                                                                
+  animation-duration: 3s;                                                                                                               
+}                                                                                                                                         
+                                                                                                                                          
+#stars3::after {                                                                                                                          
+  width: 3px;                                                                                                                           
+  height: 3px;                                                                                                                          
+  box-shadow:
+      10vw 10vh #fff, 80vw 20vh #fff, 30vw 70vh #fff, 90vw 85vh #fff, 50vw 40vh #fff;                                                     
+  animation-delay: 1s;                                                                                                                  
+  animation-duration: 4s;                                                                                                               
+}  
