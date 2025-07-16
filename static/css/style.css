@@ -147,19 +147,19 @@ section .air.air4{
   width: 100%;                                                                                                                          
   height: 100%;                                                                                                                         
   display: block;                                                                                                                       
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;                            
+  background: transparent url(/static/images/star.png) repeat top center;                            
   z-index: -1;                                                                                                                          
   animation: move-twinkle-back 200s linear infinite;                                                                                    
 }                                                                                                                                         
                                                                                                                                           
 .stars2 {                                                                                                                                 
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;                        
+  background: transparent url(/static/images/twinkling.png) repeat top center;                        
   z-index: -1;                                                                                                                          
   animation: move-twinkle-back 200s linear infinite;                                                                                    
 }                                                                                                                                         
                                                                                                                                           
 .stars3 {                                                                                                                                 
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds.png) repeat top center;                           
+  background: transparent url(/static/images/spacestars.png) repeat top center;                           
   z-index: -1;                                                                                                                          
   animation: move-twinkle-back 200s linear infinite;                                                                                    
 }  
