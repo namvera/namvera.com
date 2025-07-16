@@ -120,46 +120,4 @@ section .air.air4{
     }
 }
 
-.moon {                                                                                                                                   
-  width: 80px;                                                                                                                          
-  height: 80px;                                                                                                                         
-  border-radius: 50%;                                                                                                                   
-  background-color: var(--color-light);                                                                                                 
-  box-shadow: 0 0 20px 5px rgba(238, 238, 238, 0.5);                                                                                    
-  margin-bottom: 20px;                                                                                                                  
-}                                                                                                                                         
-                                                                                                                                          
-@keyframes move-twinkle-back {                                                                                                            
-  from {                                                                                                                                
-      background-position: 0 0;                                                                                                         
-  }                                                                                                                                     
-  to {                                                                                                                                  
-      background-position: -10000px 5000px;                                                                                             
-  }                                                                                                                                     
-}
-
-.stars, .stars2, .stars3 {                                                                                                                
-  position: absolute;                                                                                                                   
-  top: 0;                                                                                                                               
-  left: 0;                                                                                                                              
-  right: 0;                                                                                                                             
-  bottom: 0;                                                                                                                            
-  width: 100%;                                                                                                                          
-  height: 100%;                                                                                                                         
-  display: block;                                                                                                                       
-  background: transparent url(/static/images/star.png) repeat top center;                            
-  z-index: -1;                                                                                                                          
-  animation: move-twinkle-back 200s linear infinite;                                                                                    
-}                                                                                                                                         
-                                                                                                                                          
-.stars2 {                                                                                                                                 
-  background: transparent url(/static/images/twinkling.png) repeat top center;                        
-  z-index: -1;                                                                                                                          
-  animation: move-twinkle-back 200s linear infinite;                                                                                    
-}                                                                                                                                         
-                                                                                                                                          
-.stars3 {                                                                                                                                 
-  background: transparent url(/static/images/spacestars.png) repeat top center;                           
-  z-index: -1;                                                                                                                          
-  animation: move-twinkle-back 200s linear infinite;                                                                                    
-}  
+/* MEDIA */  
